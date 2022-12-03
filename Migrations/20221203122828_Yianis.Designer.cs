@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CrowdFoundAppTeam3.Migrations
 {
     [DbContext(typeof(CrowdFundDbContext))]
-    [Migration("20221127175246_Yianis")]
+    [Migration("20221203122828_Yianis")]
     partial class Yianis
     {
         /// <inheritdoc />
@@ -24,6 +24,49 @@ namespace CrowdFoundAppTeam3.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("BackerProject", b =>
+                {
+                    b.Property<int>("BackersBackerId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProjectsProjectId")
+                        .HasColumnType("int");
+
+                    b.HasKey("BackersBackerId", "ProjectsProjectId");
+
+                    b.HasIndex("ProjectsProjectId");
+
+                    b.ToTable("BackerProject");
+                });
+
+            modelBuilder.Entity("CrowdFoundAppTeam3.Domain.Backer", b =>
+                {
+                    b.Property<int>("BackerId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BackerId"));
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FirstName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("PaymentMethod")
+                        .HasColumnType("int");
+
+                    b.HasKey("BackerId");
+
+                    b.ToTable("Backers");
+                });
 
             modelBuilder.Entity("CrowdFoundAppTeam3.Domain.FundingPackage", b =>
                 {
@@ -69,36 +112,32 @@ namespace CrowdFoundAppTeam3.Migrations
                     b.Property<int>("ProjectCategory")
                         .HasColumnType("int");
 
+                    b.Property<int?>("ProjectCreatorId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("ReleaseDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("UserId")
-                        .HasColumnType("int");
-
                     b.Property<string>("VideoPath")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ProjectId");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("ProjectCreatorId");
 
                     b.ToTable("Projects");
                 });
 
-            modelBuilder.Entity("CrowdFoundAppTeam3.Domain.User", b =>
+            modelBuilder.Entity("CrowdFoundAppTeam3.Domain.ProjectCreator", b =>
                 {
-                    b.Property<int>("UserId")
+                    b.Property<int>("ProjectCreatorId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserId"));
-
-                    b.Property<string>("Discriminator")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ProjectCreatorId"));
 
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
@@ -112,30 +151,24 @@ namespace CrowdFoundAppTeam3.Migrations
                     b.Property<string>("Password")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("UserId");
+                    b.HasKey("ProjectCreatorId");
 
-                    b.ToTable("Users");
-
-                    b.HasDiscriminator<string>("Discriminator").HasValue("User");
-
-                    b.UseTphMappingStrategy();
+                    b.ToTable("ProjectCreators");
                 });
 
-            modelBuilder.Entity("CrowdFoundAppTeam3.Domain.Backer", b =>
+            modelBuilder.Entity("BackerProject", b =>
                 {
-                    b.HasBaseType("CrowdFoundAppTeam3.Domain.User");
+                    b.HasOne("CrowdFoundAppTeam3.Domain.Backer", null)
+                        .WithMany()
+                        .HasForeignKey("BackersBackerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.Property<int>("PaymentMethod")
-                        .HasColumnType("int");
-
-                    b.HasDiscriminator().HasValue("Backer");
-                });
-
-            modelBuilder.Entity("CrowdFoundAppTeam3.Domain.ProjectCreator", b =>
-                {
-                    b.HasBaseType("CrowdFoundAppTeam3.Domain.User");
-
-                    b.HasDiscriminator().HasValue("ProjectCreator");
+                    b.HasOne("CrowdFoundAppTeam3.Domain.Project", null)
+                        .WithMany()
+                        .HasForeignKey("ProjectsProjectId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("CrowdFoundAppTeam3.Domain.FundingPackage", b =>
@@ -149,9 +182,11 @@ namespace CrowdFoundAppTeam3.Migrations
 
             modelBuilder.Entity("CrowdFoundAppTeam3.Domain.Project", b =>
                 {
-                    b.HasOne("CrowdFoundAppTeam3.Domain.User", null)
+                    b.HasOne("CrowdFoundAppTeam3.Domain.ProjectCreator", "ProjectCreator")
                         .WithMany("Projects")
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("ProjectCreatorId");
+
+                    b.Navigation("ProjectCreator");
                 });
 
             modelBuilder.Entity("CrowdFoundAppTeam3.Domain.Project", b =>
@@ -159,7 +194,7 @@ namespace CrowdFoundAppTeam3.Migrations
                     b.Navigation("FundingPackages");
                 });
 
-            modelBuilder.Entity("CrowdFoundAppTeam3.Domain.User", b =>
+            modelBuilder.Entity("CrowdFoundAppTeam3.Domain.ProjectCreator", b =>
                 {
                     b.Navigation("Projects");
                 });

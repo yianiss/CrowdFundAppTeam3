@@ -63,27 +63,25 @@ namespace CrowdFoundAppTeam3.Services
             throw new NotImplementedException();
         }
 
+        public async Task<ProjectDto> UpdateAsync(int projectId, ProjectDto projectdto)
+        {
+            Project? project = await _crowdFundDbContext.Projects
+                 .Include(project => project.ProjectCreator)
+                 .SingleOrDefaultAsync(p => p.ProjectId == projectId);
 
 
-        //public async Task<ProjectDto> UpdateAsync(int projectId, ProjectDto projectdto)
-        //{
-        //    Project? project = await _crowdFundDbContext.Projects
-        //         .Include(project => project.ProjectCreator)
-        //         .SingleOrDefaultAsync(p => p.ProjectId == projectId);
+            if (projectdto.Title is not null) project.Title = projectdto.Title;
+            if (projectdto.Description is not null) project.Description = projectdto.Description;
+            project.ProjectCategory = projectdto.ProjectCategory;
+            //if (projectdto.ProjectCreator is not null)
+            //{
+            //    var projectCreator = _crowdFundDbContext.ProjectCreators.SingleOrDefault(pc => pc.ProjectCreatorId == projectdto.ProjectCreator.ProjectCreatorId);
+            //    if (projectCreator is not null) project.ProjectCreator = projectCreator;
+            //}
 
+            await _crowdFundDbContext.SaveChangesAsync();
 
-        //    if (projectdto.Title is not null) project.Title = projectdto.Title;
-        //    if (projectdto.Description is not null) project.Description = projectdto.Description;
-        //    project.ProjectCategory = projectdto.ProjectCategory;
-        //    if (projectdto.ProjectCreator is not null)
-        //    {
-        //        var projectCreator = _crowdFundDbContext.ProjectCreators.SingleOrDefault(pc => pc.ProjectCreatorId == projectdto.ProjectCreator.ProjectCreatorId);
-        //        if (projectCreator is not null) project.ProjectCreator = projectCreator;
-        //    }
-
-        //    await _crowdFundDbContext.SaveChangesAsync();
-
-        //    return project.Convert();
-        //}
+            return project.Convert();
+        }
     }
 }

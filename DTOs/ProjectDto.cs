@@ -14,7 +14,7 @@ namespace CrowdFoundAppTeam3.DTOs
 
         public ProjectCategory ProjectCategory { get; set; }
 
-      //  public List<BackerDto>? Backers { get; set; }
+      // public List<BackerDto>? Backers { get; set; }
 
        // public ProjectCreatorDto? ProjectCreator { get; set; }
 
