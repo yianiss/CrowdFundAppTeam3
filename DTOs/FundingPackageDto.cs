@@ -11,6 +11,8 @@ namespace CrowdFoundAppTeam3.DTOs
         public string? RewardPackage { get; set; }
 
         public ProjectDto? Project { get; set; }
+        
+       
     }
 }
 //geiaaaaaaaaaaa
