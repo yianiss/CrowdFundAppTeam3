@@ -41,4 +41,14 @@ public static class DtoConverters
 
         };
     }
+    public static BackerDto ConvertBacker(this Backer backer)
+    {
+        return new BackerDto()
+        {
+            FirstName = backer.FirstName,
+            LastName = backer.LastName,
+            Email = backer.Email
+
+        };
+    }
 }
