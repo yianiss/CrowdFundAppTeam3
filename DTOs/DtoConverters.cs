@@ -14,13 +14,21 @@ public static class DtoConverters
             Description = project.Description,
             ProjectCategory = project.ProjectCategory,
 
-            //ProjectCreator = new()
-            //{
-            //    FirstName = project.ProjectCreator.FirstName,
-            //    LastName = project.ProjectCreator.LastName,
-            //    Email = project.ProjectCreator.Email
-            //}
             
+        };
+    }
+    public static FundingPackageDto ConvertFundingPackage(this FundingPackage fundingPackage)
+    {
+        return new FundingPackageDto()
+        {
+            
+            FundingPackageTitle = fundingPackage.FundingPackageTitle,
+
+            FundingPackageDescription = fundingPackage.FundingPackageDescription,
+
+            RewardPackage = fundingPackage.RewardPackage
+
+
         };
     }
 }

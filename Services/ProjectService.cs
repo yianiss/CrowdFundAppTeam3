@@ -52,9 +52,7 @@ namespace CrowdFoundAppTeam3.Services
                 //.Include(project => project.ProjectCategory)
                 .SingleOrDefaultAsync(project => project.ProjectCategory == projectCategory);
 
-            if (projectCategory == null) return null;
-
-            return project.Convert();
+            return project?.Convert();
 
         }
 

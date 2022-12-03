@@ -1,37 +1,20 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-    "C:\\Users\\anton\\source\\repos\\CrowdFundAppTeam3\\CrowdFoundAppTeam3.csproj": {}
+    "C:\\Users\\vklid\\source\\repos\\CrowdFundAppTeam3\\CrowdFoundAppTeam3.csproj": {}
   },
   "projects": {
-    "C:\\Users\\anton\\source\\repos\\CrowdFundAppTeam3\\CrowdFoundAppTeam3.csproj": {
+    "C:\\Users\\vklid\\source\\repos\\CrowdFundAppTeam3\\CrowdFoundAppTeam3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\anton\\source\\repos\\CrowdFundAppTeam3\\CrowdFoundAppTeam3.csproj",
+        "projectUniqueName": "C:\\Users\\vklid\\source\\repos\\CrowdFundAppTeam3\\CrowdFoundAppTeam3.csproj",
         "projectName": "CrowdFoundAppTeam3",
-        "projectPath": "C:\\Users\\anton\\source\\repos\\CrowdFundAppTeam3\\CrowdFoundAppTeam3.csproj",
-        "packagesPath": "C:\\Users\\anton\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\anton\\source\\repos\\CrowdFundAppTeam3\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\anton\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-    "C:\\Users\\vklid\\Source\\Repos\\CrowdFundAppTeam3\\CrowdFoundAppTeam3.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\vklid\\Source\\Repos\\CrowdFundAppTeam3\\CrowdFoundAppTeam3.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\vklid\\Source\\Repos\\CrowdFundAppTeam3\\CrowdFoundAppTeam3.csproj",
-        "projectName": "CrowdFoundAppTeam3",
-        "projectPath": "C:\\Users\\vklid\\Source\\Repos\\CrowdFundAppTeam3\\CrowdFoundAppTeam3.csproj",
+        "projectPath": "C:\\Users\\vklid\\source\\repos\\CrowdFundAppTeam3\\CrowdFoundAppTeam3.csproj",
         "packagesPath": "C:\\Users\\vklid\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\vklid\\Source\\Repos\\CrowdFundAppTeam3\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vklid\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 6932dce5391369f5f22f4b2b2bb194e8fd6afb6e
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -97,11 +80,7 @@
               "privateAssets": "all"
             }
           },
-<<<<<<< HEAD
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
-=======
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
->>>>>>> 6932dce5391369f5f22f4b2b2bb194e8fd6afb6e
         }
       }
     }
