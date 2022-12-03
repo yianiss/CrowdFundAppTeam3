@@ -1,13 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\Controllers",
-    "\\Domain",
-    "\\DTOs",
-    "\\Interface",
-    "\\Migrations",
-    "\\Services"
+    ""
   ],
-  "SelectedNode": "\\Domain",
+  "SelectedNode": "\\CrowdFoundAppTeam3.sln",
   "PreviewInSolutionExplorer": false
 }

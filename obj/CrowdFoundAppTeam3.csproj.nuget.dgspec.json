@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Yianis\\Downloads\\CrowdFoundAppTeam3\\CrowdFoundAppTeam3\\CrowdFoundAppTeam3.csproj": {}
+    "C:\\Users\\anton\\source\\repos\\CrowdFundAppTeam3\\CrowdFoundAppTeam3.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Yianis\\Downloads\\CrowdFoundAppTeam3\\CrowdFoundAppTeam3\\CrowdFoundAppTeam3.csproj": {
+    "C:\\Users\\anton\\source\\repos\\CrowdFundAppTeam3\\CrowdFoundAppTeam3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Yianis\\Downloads\\CrowdFoundAppTeam3\\CrowdFoundAppTeam3\\CrowdFoundAppTeam3.csproj",
+        "projectUniqueName": "C:\\Users\\anton\\source\\repos\\CrowdFundAppTeam3\\CrowdFoundAppTeam3.csproj",
         "projectName": "CrowdFoundAppTeam3",
-        "projectPath": "C:\\Users\\Yianis\\Downloads\\CrowdFoundAppTeam3\\CrowdFoundAppTeam3\\CrowdFoundAppTeam3.csproj",
-        "packagesPath": "C:\\Users\\Yianis\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Yianis\\Downloads\\CrowdFoundAppTeam3\\CrowdFoundAppTeam3\\obj\\",
+        "projectPath": "C:\\Users\\anton\\source\\repos\\CrowdFundAppTeam3\\CrowdFoundAppTeam3.csproj",
+        "packagesPath": "C:\\Users\\anton\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\anton\\source\\repos\\CrowdFundAppTeam3\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Yianis\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\anton\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -84,7 +80,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
