@@ -31,4 +31,14 @@ public static class DtoConverters
 
         };
     }
+    public static ProjectCreatorDto ConvertPC(this ProjectCreator projectCreator)
+    {
+        return new ProjectCreatorDto()
+        {
+            FirstName = projectCreator.FirstName,
+            LastName = projectCreator.LastName,
+            Email = projectCreator.Email
+
+        };
+    }
 }
