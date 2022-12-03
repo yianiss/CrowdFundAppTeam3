@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WAdGV5kYIrJmaiBhHVuU/jMD+Ybj0oQgN3tuiw/aSur7dd/3EcfWGaJSla/GyB7lo+YEfcftyK05iiVppBbSLg==",
+  "dgSpecHash": "SL+iTQGe7i0QqHJfp6GgfdAJqHRRvGgCSLUjfBy9p2FLWJmliJVlWtv4qhwm10Ru4ND7jKwNYbmuPM91p02H4g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Yianis\\Downloads\\CrowdFoundAppTeam3\\CrowdFoundAppTeam3\\CrowdFoundAppTeam3.csproj",
+  "projectFilePath": "C:\\Users\\Yianis\\source\\repos\\CrowdFoundAppTeam3\\CrowdFoundAppTeam3.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Yianis\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Yianis\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Yianis\\Downloads\\CrowdFoundAppTeam3\\CrowdFoundAppTeam3\\CrowdFoundAppTeam3.csproj": {}
+    "C:\\Users\\Yianis\\source\\repos\\CrowdFoundAppTeam3\\CrowdFoundAppTeam3.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Yianis\\Downloads\\CrowdFoundAppTeam3\\CrowdFoundAppTeam3\\CrowdFoundAppTeam3.csproj": {
+    "C:\\Users\\Yianis\\source\\repos\\CrowdFoundAppTeam3\\CrowdFoundAppTeam3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Yianis\\Downloads\\CrowdFoundAppTeam3\\CrowdFoundAppTeam3\\CrowdFoundAppTeam3.csproj",
+        "projectUniqueName": "C:\\Users\\Yianis\\source\\repos\\CrowdFoundAppTeam3\\CrowdFoundAppTeam3.csproj",
         "projectName": "CrowdFoundAppTeam3",
-        "projectPath": "C:\\Users\\Yianis\\Downloads\\CrowdFoundAppTeam3\\CrowdFoundAppTeam3\\CrowdFoundAppTeam3.csproj",
+        "projectPath": "C:\\Users\\Yianis\\source\\repos\\CrowdFoundAppTeam3\\CrowdFoundAppTeam3.csproj",
         "packagesPath": "C:\\Users\\Yianis\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Yianis\\Downloads\\CrowdFoundAppTeam3\\CrowdFoundAppTeam3\\obj\\",
+        "outputPath": "C:\\Users\\Yianis\\source\\repos\\CrowdFoundAppTeam3\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
