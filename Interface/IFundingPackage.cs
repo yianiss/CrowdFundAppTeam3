@@ -5,7 +5,7 @@ namespace CrowdFoundAppTeam3.Interface
 {
     public interface IFundingPackage
     {
-        public  Task<List<FundingPackage?>?> GetFundingPackagesByProjectAsync(int projectId);
+        public  Task<FundingPackage?> GetFundingPackagesByProjectAsync(int projectId);
 
         public Task<FundingPackageDto> CreateFundingPackageAsync(FundingPackageDto fundingPackage);
     }

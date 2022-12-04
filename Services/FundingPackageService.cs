@@ -37,19 +37,20 @@ namespace CrowdFoundAppTeam3.Services
             return fundingPackage.ConvertFundingPackage();
         }
 
-        //public async Task<List<FundingPackage?>?> GetFundingPackagesByProjectAsync(int projectId)
-        //{
-        //    var project = await _crowdFundDbContext.Projects.FindAsync(projectId);
-        //    var fundingPackage = await _crowdFundDbContext.FundingPackages
 
-        //                         .SingleOrDefaultAsync(fundingPackage => fundingPackage.Project.ProjectId == projectId);
+        public async Task<FundingPackage?> GetFundingPackagesByProjectAsync(int projectId)
+        {
+            var project = await _crowdFundDbContext.Projects.FindAsync(projectId);
+            var fundingPackage = await _crowdFundDbContext.FundingPackages
 
-        //    if (fundingPackage == null) return null;
+                                 .SingleOrDefaultAsync(fundingPackage => fundingPackage.Project.ProjectId == projectId);
+
+            if (fundingPackage == null) return null;
 
 
-        //    return await fundingPackage;
+            return  fundingPackage;
 
-        //alternative option
+            //alternative option
 
             //    var project = await _crowdFundDbContext.Projects.FindAsync(projectId);
             //    var fundingPackageList = new List<FundingPackageDto>();
