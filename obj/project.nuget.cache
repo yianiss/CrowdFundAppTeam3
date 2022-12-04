@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "mIAtWcpVHvrTDbVBMIolUMfKAguVokVXfizIS0L+B4BBUKg0u4V0krpQQ77UxkUlIlVGBochqN2jYLqd5+Ntbg==",
+  "dgSpecHash": "ZpaAaxxYVVxyitvjPETKIhQbFvEq7DAGhTtnqfdtFBe1j/AHur+BydgraRoZhcRfXcAJQZEPEM8ah/xH+fXOpA==",
   "success": true,
   "projectFilePath": "C:\\Users\\vklid\\source\\repos\\CrowdFundAppTeam3\\CrowdFoundAppTeam3.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vklid\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\vklid\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\vklid\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\vklid\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning\\5.0.0\\microsoft.aspnetcore.mvc.versioning.5.0.0.nupkg.sha512",
     "C:\\Users\\vklid\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\vklid\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\vklid\\.nuget\\packages\\microsoft.data.sqlclient\\5.0.1\\microsoft.data.sqlclient.5.0.1.nupkg.sha512",

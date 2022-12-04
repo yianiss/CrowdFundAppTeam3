@@ -11,9 +11,10 @@ namespace CrowdFoundAppTeam3.Interface
         
         public Task<ProjectDto> CreateProjectAsync(ProjectDto project);
 
-        public Task<List<ProjectDto>> SearchAsync(ProjectDto title, ProjectDto description);
+        public Task<List<ProjectDto>> SearchAsync
+            (string Title, string Description);
 
-      //  public Task<ProjectDto> UpdateAsync(int projectId, ProjectDto projectdto);  
+        //  public Task<ProjectDto> UpdateAsync(int projectId, ProjectDto projectdto);  
 
 
 

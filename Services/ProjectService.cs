@@ -2,6 +2,7 @@
 using CrowdFoundAppTeam3.Domain;
 using CrowdFoundAppTeam3.DTOs;
 using CrowdFoundAppTeam3.Interface;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace CrowdFoundAppTeam3.Services
@@ -56,9 +57,32 @@ namespace CrowdFoundAppTeam3.Services
 
         }
 
-        public Task<List<ProjectDto>> SearchAsync(ProjectDto title, ProjectDto description)
+        public async Task<List<ProjectDto>> SearchAsync
+            ([FromQuery] string Title, [FromQuery] string Description)
         {
-            throw new NotImplementedException();
+            var results = _crowdFundDbContext.Projects.Include(pc => pc.ProjectCreator).Select(p => p);
+
+            if (Title != null)
+            {
+                results = results.Where(p => p.Title.ToLower().Contains(Title.ToLower()));
+            }
+
+            if (Description != null)
+            {
+                results = results.Where(p => p.Description.ToLower().Contains(Description.ToLower()));
+            }
+
+            var resultsList = await results.ToListAsync();
+
+            if (resultsList == null) return null;
+
+            List<ProjectDto> response = new();
+            foreach (var p in resultsList)
+            {
+                response.Add(p.Convert());
+            }
+
+            return response;
         }
 
 
