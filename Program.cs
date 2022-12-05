@@ -16,6 +16,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<CrowdFundDbContext>
     (options => options.UseSqlServer(builder.Configuration.GetConnectionString("CrowdFund")));
 builder.Services.AddScoped<IProjectService, ProjectService>();
+builder.Services.AddScoped<IProjectCreator, ProjectCreatorService>();
 
 var app = builder.Build();
 

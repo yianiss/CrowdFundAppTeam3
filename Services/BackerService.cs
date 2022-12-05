@@ -2,6 +2,7 @@
 using CrowdFoundAppTeam3.Domain;
 using CrowdFoundAppTeam3.DTOs;
 using CrowdFoundAppTeam3.Interface;
+using Microsoft.EntityFrameworkCore;
 
 namespace CrowdFoundAppTeam3.Services
 {
@@ -37,6 +38,13 @@ namespace CrowdFoundAppTeam3.Services
             await _crowdFundDbContext.AddAsync(newBacker);
             await _crowdFundDbContext.SaveChangesAsync();
             return newBacker.ConvertBacker();
+        }
+        public async Task<List<BackerDto>> GetAllBackerAsync()
+        {
+            return await _crowdFundDbContext.Backers
+                .Include(backer => backer.BackerId)
+                .Select(backer => backer.ConvertBacker())
+                .ToListAsync();
         }
     }
 }
